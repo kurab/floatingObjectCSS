@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.headingText {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.floatingContainer {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.floatingCard {
+  max-width: 300px;
+  transform: rotateX(30deg) rotateY(-20deg) rotateZ(20deg);
+  transform-origin: 80% 50% 0px;
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 8px;
+}
+
+.floatingObject {
+  position: relative;
+  margin-bottom: 10vh;
+  perspective: 600px;
+}
+.floatingObject:after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 50px;
+  top: 100%;
+  left: -10%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: -1;
+}
